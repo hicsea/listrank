@@ -1,24 +1,23 @@
 from PyQt6.QtWidgets import QPushButton, QWidget, QVBoxLayout
-from data_processor import process_data
 
 class ButtonWidget(QWidget):
-    def __init__(self, button_text, button_id):
+    def __init__(self, button_text, item, callback):
         super().__init__()
-        self.button_id = button_id
-        self.initUI(button_text)
+        self.callback = callback
+        self.initUI(button_text, item)
 
-    def initUI(self, button_text):
-        # Create layout
-        vbox = QVBoxLayout()
-
-        # Create button and add to layout
+    def initUI(self, button_text, item):
+        self.vbox = QVBoxLayout()
         self.button = QPushButton(button_text)
-        self.button.clicked.connect(self.on_click)  # Connect button click to handler
-        vbox.addWidget(self.button)
+        self.button.clicked.connect(self.on_click)
+        self.item = item
+        self.vbox.addWidget(self.button)
+        self.setLayout(self.vbox)
 
-        # Set the layout
-        self.setLayout(vbox)
+    def update_text_and_item(self, text, item):
+        self.button.setText(text)
+        self.item = item
 
     def on_click(self):
-        # Trigger data processing when the button is clicked
-        process_data(self.button_id)
+        if self.callback and callable(self.callback):
+            self.callback()
