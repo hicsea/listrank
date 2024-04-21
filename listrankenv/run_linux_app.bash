@@ -8,7 +8,7 @@ source bin/activate
 
 # Navigate to the app directory and run the application
 cd app
-python main.py colors2
+python main.py Top_50_Songs
 
 # Deactivate the virtual environment when done
 deactivate

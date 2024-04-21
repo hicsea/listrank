@@ -2,6 +2,8 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QPu
 from PyQt6.QtGui import QAction  # Corrected import for QAction
 from gui.button_widget import ButtonWidget
 from models.list.List import List
+# from models.list.update_score import update_score
+
 
 class MainWindow(QMainWindow):
     def __init__(self, listname):
@@ -78,6 +80,11 @@ class MainWindow(QMainWindow):
         
         # Refresh the items displayed on the buttons
         self.refresh_items_and_buttons()
+
+        winner.increment_frequency()
+        loser.increment_frequency()
+
+
 
     def print_sorted_list(self):
         # Sort the items and print to console
