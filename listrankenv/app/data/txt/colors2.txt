@@ -1,0 +1,8 @@
+happy
+glad
+cheerful
+jolly
+sad
+disappointed
+mad
+unhappy

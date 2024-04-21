@@ -1,0 +1,19 @@
+New York City - New York
+Los Angeles - California
+Chicago - Illinois
+Las Vegas - Nevada
+Miami - Florida
+San Francisco - California
+New Orleans - Louisiana
+Honolulu - Hawaii
+Orlando - Florida
+Seattle - Washington
+Boston - Massachusetts
+San Diego - California
+Austin - Texas
+Denver - Colorado
+Nashville - Tennessee
+Washington D.C.
+Portland - Oregon
+Atlanta - Georgia
+Charleston - South Carolina

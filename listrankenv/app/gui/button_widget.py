@@ -10,6 +10,7 @@ class ButtonWidget(QWidget):
         self.vbox = QVBoxLayout()
         self.button = QPushButton(button_text)
         self.button.clicked.connect(self.on_click)
+        self.button.setMinimumHeight(60)  # You can adjust the value as needed
         self.item = item
         self.vbox.addWidget(self.button)
         self.setLayout(self.vbox)
